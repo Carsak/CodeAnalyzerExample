@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+files=$(git diff --name-only master --diff-filter=MARC | grep .php$)
+
+if [ -n "$files" ]; then
+  vendor/bin/phpcs "$files"
+  exit 0
+else
+  echo 'files is empty'
+  exit 1
+fi
+

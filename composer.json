@@ -34,5 +34,8 @@
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
+    },
+    "scripts": {
+        "post-install-cmd": "cp bin/pre-commit .git/hooks/pre-commit"
     }
 }

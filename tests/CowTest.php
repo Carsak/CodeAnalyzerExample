@@ -60,6 +60,7 @@ class CowTest extends \PHPUnit_Framework_TestCase
 
 COW;
         $testcow = str_replace('{{bubble}}', $bubble, $testcow);
+
         $this->assertEquals($testcow, Cow::say($text));
     }
 }
